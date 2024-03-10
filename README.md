@@ -1,6 +1,6 @@
 # simple-storage
 
-[![Node.js CI](https://github.com/john-doherty/simple-storage/actions/workflows/ci.yml/badge.svg)](https://github.com/john-doherty/simple-storage/actions/workflows/ci.yml)
+[![Tests](https://github.com/john-doherty/simple-storage/actions/workflows/ci.yml/badge.svg)](https://github.com/john-doherty/simple-storage/actions/workflows/ci.yml)
 
 **simpleStorage** is a lightweight JavaScript library designed to enhance the usability and functionality of the browser's `localStorage`. It simplifies the process of storing, retrieving, and managing data by automatically handling data type casting. This means you can store and retrieve various data types, including objects, arrays, booleans, and numbers, without worrying about manual serialization or deserialization.
 
