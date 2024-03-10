@@ -10,6 +10,16 @@
 * **No dependencies** implemented in vanilla JavaScript
 * **Lightweight** less than 1k of pure JS
 
+### Methods
+
+Method            | Description
+:-----------------|:----------------------------------------------------------------------------
+`set(key, value)` | Saves an item to localStorage, automatically stringifying objects and arrays
+`get(key)`        | Retrieves an item from localStorage, auto-casting to its original data type
+`exists(key)`     | Checks if a given key exists in localStorage
+`remove(key)`     | Removes an item from localStorage
+`clear()`         | Clears all entries in localStorage
+
 ## Why simple-storage?
 
 Working directly with localStorage often requires repetitive type checking and conversion, which can lead to cluttered code and increased potential for errors. simple-storage abstracts these complexities, allowing developers to focus on the logic and functionality of their applications, not on the nuances of data storage.
@@ -47,16 +57,6 @@ simpleStorage.clear();
 ```
 
 See [unit tests](/tests/simple-storage-casting-spec.js) for more examples.
-
-### Methods
-
-Method            | Description
-:-----------------|:----------------------------------------------------------------------------
-`set(key, value)` | Saves an item to localStorage, automatically stringifying objects and arrays
-`get(key)`        | Retrieves an item from localStorage, auto-casting to its original data type
-`exists(key)`     | Checks if a given key exists in localStorage
-`remove(key)`     | Removes an item from localStorage
-`clear()`         | Clears all entries in localStorage
 
 ## Contributing
 
