@@ -4,23 +4,13 @@
 
 **simpleStorage** is a lightweight JavaScript library designed to enhance the usability and functionality of the browser's `localStorage`. It simplifies the process of storing, retrieving, and managing data by automatically handling data type casting. This means you can store and retrieve various data types, including objects, arrays, booleans, and numbers, without worrying about manual serialization or deserialization.
 
-### Key Features
+### Key features
 * **Auto-casting** automatically casts data types when saving and retrieving from localStorage
 * **Simplified API** provides an easy-to-use API to interact with localStorage
 * **No dependencies** implemented in vanilla JavaScript
 * **Lightweight** less than 1k of pure JS
 
-### Methods
-
-Method            | Description
-:-----------------|:----------------------------------------------------------------------------
-`set(key, value)` | Saves an item to localStorage, automatically stringifying objects and arrays
-`get(key)`        | Retrieves an item from localStorage, auto-casting to its original data type
-`exists(key)`     | Checks if a given key exists in localStorage
-`remove(key)`     | Removes an item from localStorage
-`clear()`         | Clears all entries in localStorage
-
-## Why simple-storage?
+### Why simple-storage?
 
 Working directly with localStorage often requires repetitive type checking and conversion, which can lead to cluttered code and increased potential for errors. simple-storage abstracts these complexities, allowing developers to focus on the logic and functionality of their applications, not on the nuances of data storage.
 
@@ -57,6 +47,16 @@ simpleStorage.clear();
 ```
 
 See [unit tests](/tests/simple-storage-casting-spec.js) for more examples.
+
+### Methods
+
+Method            | Description
+:-----------------|:----------------------------------------------------------------------------
+`set(key, value)` | Saves an item to localStorage, automatically stringifying objects and arrays
+`get(key)`        | Retrieves an item from localStorage, auto-casting to its original data type
+`exists(key)`     | Checks if a given key exists in localStorage
+`remove(key)`     | Removes an item from localStorage
+`clear()`         | Clears all entries in localStorage
 
 ## Contributing
 
