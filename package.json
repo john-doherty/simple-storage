@@ -4,7 +4,7 @@
   "description": "Simplifies localStorage by auto-casting data types.",
   "main": "src/simple-storage.js",
   "scripts": {
-    "start": "node server/dev-server.js",
+    "test": "NODE_ENV=test node_modules/.bin/jasmine --config=tests/jasmine/config.json",
     "build": "node_modules/gulp/bin/gulp.js build",
     "clean": "node_modules/gulp/bin/gulp.js clean"
   },
@@ -30,7 +30,9 @@
     "gulp-minify": "^3.1.0",
     "gulp-sizereport": "^1.2.1",
     "gulp-string-replace": "^1.1.2",
-    "gulp4-run-sequence": "^1.0.1"
+    "gulp4-run-sequence": "^1.0.1",
+    "jasmine": "^4.0.2",
+    "jasmine-console-reporter": "^3.1.0"
   },
   "eslintConfig": {
     "extends": "airbnb-base",

@@ -104,7 +104,7 @@
     };
 
     // export
-    if (typeof window === 'undefined') {
+    if (module && module.exports) {
         module.exports = simpleStorage;
     }
     else {
