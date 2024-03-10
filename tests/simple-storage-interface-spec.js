@@ -1,4 +1,4 @@
-require('./local-storage-mock.js');
+require('./helpers/local-storage-mock.js');
 var simpleStorage = require('../src/simple-storage.js');
 
 describe('simpleStorage: interface', function() {

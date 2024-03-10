@@ -1,4 +1,4 @@
-require('./local-storage-mock.js');
+require('./helpers/local-storage-mock.js');
 var simpleStorage = require('../src/simple-storage.js');
 
 describe('simpleStorage: casting', function() {
@@ -29,17 +29,9 @@ describe('simpleStorage: casting', function() {
         const obj = { a: 1, b: 'test', c: true };
         simpleStorage.set('obj', obj);
         expect(simpleStorage.get('obj')).toEqual(obj);
-
-        const arr = [1, 'two', false];
-        simpleStorage.set('arr', arr);
-        expect(simpleStorage.get('arr')).toEqual(arr);
     });
 
     it('should auto-cast arrays', function() {
-        const obj = { a: 1, b: 'test', c: true };
-        simpleStorage.set('obj', obj);
-        expect(simpleStorage.get('obj')).toEqual(obj);
-
         const arr = [1, 'two', false];
         simpleStorage.set('arr', arr);
         expect(simpleStorage.get('arr')).toEqual(arr);
@@ -58,5 +50,10 @@ describe('simpleStorage: casting', function() {
     it('should treat strings as strings', function() {
         simpleStorage.set('string', 'hello');
         expect(simpleStorage.get('string')).toBe('hello');
+    });
+
+    it('should not confuse strings as objects', function() {
+        simpleStorage.set('notAnObject', '[');
+        expect(simpleStorage.get('notAnObject')).toBe('[');
     });
 });
