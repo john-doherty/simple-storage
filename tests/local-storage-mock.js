@@ -6,7 +6,7 @@ global.localStorage = (function() {
             return store.hasOwnProperty(key) ? store[key] : null;
         },
         setItem: function(key, value) {
-            store[key] = value.toString();
+            store[key] = String(value);
         },
         removeItem: function(key) {
             delete store[key];
