@@ -1,6 +1,6 @@
 /*!
  * simple-storage.js - v@version@
- * Auto-casting localStorage helper
+ * 1k auto-casting localStorage helper
  * https://github.com/john-doherty/simple-storage
  * @author John Doherty <www.johndoherty.info>
  * @license MIT

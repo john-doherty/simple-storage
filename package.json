@@ -1,7 +1,7 @@
 {
   "name": "simple-storage",
   "version": "1.0.0",
-  "description": "Auto-casting localStorage helper",
+  "description": "1k auto-casting localStorage helper",
   "main": "src/simple-storage.js",
   "scripts": {
     "test": "NODE_ENV=test node_modules/.bin/jasmine --config=tests/jasmine/config.json",
