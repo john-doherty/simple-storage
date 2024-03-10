@@ -11,43 +11,23 @@ Add [simple-storage.min.js](dist/simple-storage.min.js) to your project:
 ```
 
 ```js
-/**
- * Save an item to local storage
- * @param {string} key - variable name
- * @param {any} value - value of variable to save
- * @return {void}
- */
+// Save an item to local storage (no need to JSON.stringify)
 simpleStorage.set('userSettings', {
   theme: 'dark',
   notifications: true
 });
 
-/**
- * Get an item from local storage
- * @param {string} key - variable name
- * @return {any} correctly cast value if it exists
- */
+// Get an item from local storage (no need to JSON.parse)
 var userSettings = simpleStorage.get('userSettings');
 
-/**
- * Check if item exists in local storage
- * @param {string} key - variable name
- * @return {boolean} true if key exists, otherwise false
- */
+// Check if item exists in local storage
 if (simpleStorage.exists('userSettings')) {
   console.log('User settings available!');
 }
 
-/**
- * Remove an item from local storage
- * @param {string} key - variable name
- * @return {void}
- */
+// Remove an item from local storage
 simpleStorage.remove('userSettings');
 
-/**
- * Clear all local storage values
- * @return {void}
- */
+// Clear all local storage values
 simpleStorage.clear();
 ```
