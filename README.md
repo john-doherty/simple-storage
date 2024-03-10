@@ -46,6 +46,16 @@ simpleStorage.clear();
 
 See [unit tests](/tests/simple-storage-casting-spec.js) for more examples.
 
+### Methods
+
+Method            | Description
+:-----------------|:----------------------------------------------------------------------------
+`set(key, value)` | Saves an item to localStorage, automatically stringifying objects and arrays
+`get(key)`        | Retrieves an item from localStorage, auto-casting to its original data type
+`exists(key)`     | Checks if a given key exists in localStorage
+`remove(key)`     | Removes an item from localStorage
+`clear()`         | Clears all entries in localStorage
+
 ## Contributing
 
 Pull requests are welcomed:
