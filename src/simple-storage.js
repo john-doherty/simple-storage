@@ -1,6 +1,6 @@
 /*!
  * simple-storage.js - v@version@
- * Simplifies localStorage by auto-casting data types
+ * Auto-casting localStorage helper
  * https://github.com/john-doherty/simple-storage
  * @author John Doherty <www.johndoherty.info>
  * @license MIT
