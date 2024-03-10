@@ -23,24 +23,24 @@ Add [simple-storage.min.js](dist/simple-storage.min.js) to your project:
 And use it in your web app:
 
 ```js
-// Save an item to local storage (no need to JSON.stringify)
+// save an item (no need to JSON.stringify)
 simpleStorage.set('userSettings', {
   theme: 'dark',
   notifications: true
 });
 
-// Get an item from local storage (no need to JSON.parse)
+// get an item (no need to JSON.parse)
 var userSettings = simpleStorage.get('userSettings');
 
-// Check if item exists in local storage
+// check if item exists
 if (simpleStorage.exists('userSettings')) {
   console.log('User settings available!');
 }
 
-// Remove an item from local storage
+// remove an item
 simpleStorage.remove('userSettings');
 
-// Clear all local storage values
+// clear local storage
 simpleStorage.clear();
 ```
 
