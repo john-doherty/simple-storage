@@ -18,15 +18,6 @@
     var simpleStorage = {
 
         /**
-         * Check if item exists in local storage.
-         * @param {string} key - variable name
-         * @return {boolean} true if key exists, otherwise false
-         */
-        exists: function (key) {
-            return Object.prototype.hasOwnProperty.call(_storage, key);
-        },
-
-        /**
          * Get an item from local storage
          * @param {string} key - variable name
          * @return {any} correctly cast value if it exists
@@ -77,11 +68,21 @@
                 throw new TypeError('localStorage: Key must be a string');
             }
 
+            // auto stringify objects or arrays
             if (typeof value === 'object' || Array.isArray(value)) {
                 value = JSON.stringify(value);
             }
 
             _storage.setItem(key, value);
+        },
+
+        /**
+         * Check if item exists in local storage
+         * @param {string} key - variable name
+         * @return {boolean} true if key exists, otherwise false
+         */
+        exists: function (key) {
+            return Object.prototype.hasOwnProperty.call(_storage, key);
         },
 
         /**
