@@ -54,8 +54,7 @@ npm run build
 
 ## Star the repo
 
-If you find this useful ⭐ the repo, it helps me prioritize which bugs tackle.
-
+If you find this useful ⭐ the repo, it helps me prioritise which bugs to work on.
 
 ## History
 
