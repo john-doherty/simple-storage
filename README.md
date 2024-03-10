@@ -34,6 +34,8 @@ simpleStorage.remove('userSettings');
 simpleStorage.clear();
 ```
 
+See [unit tests](/tests/simple-storage-casting-spec.js) for more examples.
+
 ## Contributing
 
 Pull requests are welcomed:
