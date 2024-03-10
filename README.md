@@ -5,9 +5,9 @@
 **simpleStorage** is a lightweight JavaScript library designed to enhance the usability and functionality of the browser's `localStorage`. It simplifies the process of storing, retrieving, and managing data by automatically handling data type casting. This means you can store and retrieve various data types, including objects, arrays, booleans, and numbers, without worrying about manual serialization or deserialization.
 
 ### Key Features
-* **Auto-Casting** automatically casts data types when saving and retrieving from localStorage
+* **Auto-casting** automatically casts data types when saving and retrieving from localStorage
 * **Simplified API** provides an easy-to-use API to interact with localStorage
-* **No Dependencies** implemented in vanilla JavaScript
+* **No dependencies** implemented in vanilla JavaScript
 * **Lightweight** less than 1k of pure JS
 
 ## Why simple-storage?
