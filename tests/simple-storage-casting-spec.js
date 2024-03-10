@@ -7,7 +7,7 @@ describe('simpleStorage: casting', function() {
         localStorage.clear();
     });
 
-    it('should auto-cast boolean values', function() {
+    it('should auto-cast boolean', function() {
         simpleStorage.set('boolTrue', true);
         expect(simpleStorage.get('boolTrue')).toBe(true);
 
@@ -15,17 +15,27 @@ describe('simpleStorage: casting', function() {
         expect(simpleStorage.get('boolFalse')).toBe(false);
     });
 
-    it('should auto-cast integer values', function() {
+    it('should auto-cast integer', function() {
         simpleStorage.set('int', 123);
         expect(simpleStorage.get('int')).toBe(123);
     });
 
-    it('should auto-cast float values', function() {
+    it('should auto-cast float', function() {
         simpleStorage.set('float', 12.34);
         expect(simpleStorage.get('float')).toBe(12.34);
     });
 
-    it('should auto-cast JSON objects and arrays', function() {
+    it('should auto-cast JSON objects', function() {
+        const obj = { a: 1, b: 'test', c: true };
+        simpleStorage.set('obj', obj);
+        expect(simpleStorage.get('obj')).toEqual(obj);
+
+        const arr = [1, 'two', false];
+        simpleStorage.set('arr', arr);
+        expect(simpleStorage.get('arr')).toEqual(arr);
+    });
+
+    it('should auto-cast arrays', function() {
         const obj = { a: 1, b: 'test', c: true };
         simpleStorage.set('obj', obj);
         expect(simpleStorage.get('obj')).toEqual(obj);
@@ -42,7 +52,6 @@ describe('simpleStorage: casting', function() {
 
     it('should return undefined for undefined values', function() {
         simpleStorage.set('undefined', undefined);
-        // Note: localStorage can't store undefined, so it will be stored as the string "undefined"
         expect(simpleStorage.get('undefined')).toBe(undefined);
     });
 
